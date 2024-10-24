@@ -5,12 +5,12 @@ import { Config } from "tailwindcss";
 
 extend([mixPlugin]);
 
-const generateDarkenColorFrom = (color: string, percentage = 0.8): string => {
+const generateDarkenColorFrom = (color: string, percentage = 0.07): string => {
   return colord(color).darken(percentage).toHex();
 };
 const generateForegroundColorFrom = (
   color: string,
-  percentage = 0.7
+  percentage = 0.8
 ): string => {
   return colord(color)
     .mix(colord(color).isDark() ? "white" : "dark", percentage)
