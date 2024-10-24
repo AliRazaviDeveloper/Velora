@@ -21,7 +21,7 @@ type Props = {
 const ColorBox: React.FC<Props> = ({ name, value }) => {
   return (
     <div
-      className="w-96 h-60 flex flex-col justify-center text-center items-center uppercase"
+      className="w-96 h-60 font-bold flex flex-col justify-center text-center items-center uppercase"
       style={{
         background: value,
         color: isColorDark(value),

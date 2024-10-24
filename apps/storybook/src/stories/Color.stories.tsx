@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Color from "@repo/ui/color";
 
 const meta = {
-  title: "Example/Color",
+  title: "Base/Color",
   component: Color,
   tags: ["autodocs"],
   decorators: [
