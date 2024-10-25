@@ -1,10 +1,10 @@
-import Color from "@repo/ui/color";
+import HeroSection from "./_components/hero-section";
 
 const Home = () => {
   return (
-    <div className="flex flex-row flex-wrap justify-center items-center">
-      <Color />
-    </div>
+    <>
+      <HeroSection />
+    </>
   );
 };
 

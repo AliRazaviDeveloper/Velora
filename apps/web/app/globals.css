@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-pattern {
+  background-image: url("../public/images/tile.svg");
+}
+.gradiant-custom {
+  @apply bg-gradient-to-r from-gradient-first to-gradient-first to-gradient-second text-transparent bg-clip-text;
+}

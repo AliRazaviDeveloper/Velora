@@ -63,7 +63,16 @@ const config: Config = {
   theme: {
     colors: tailwindColor,
 
-    extend: {},
+    extend: {
+      fontFamily: {
+        figtree: ["var(--font-figtree)", "sans-serif"],
+        yekan: ["var(--font-yekan-bakh)", "sans-serif"],
+      },
+    },
+    container: {
+      center: true,
+      padding: "1rem",
+    },
   },
   darkMode: "class",
   plugins: [],
