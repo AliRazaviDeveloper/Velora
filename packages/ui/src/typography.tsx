@@ -1,19 +1,8 @@
+import { ComponentBaseType } from "./types/component-base.type";
 import classNames from "./utils/classNames";
 
 type TextOwnProps<E extends React.ElementType> = {
-  children?: React.ReactNode;
   as?: E;
-  size?:
-    | "xs"
-    | "sm"
-    | "base"
-    | "lg"
-    | "xl"
-    | "2xl"
-    | "3xl"
-    | "4xl"
-    | "5xl"
-    | "6xl";
   weight?:
     | "thin"
     | "extraLight"
@@ -25,8 +14,7 @@ type TextOwnProps<E extends React.ElementType> = {
     | "extraBold"
     | "black";
   align?: "left" | "center" | "right" | "justify";
-  className?: string;
-};
+} & ComponentBaseType;
 
 const textStyles = {
   size: {
@@ -63,6 +51,15 @@ const textStyles = {
     right: "text-right",
     justify: "text-justify",
   },
+  variant: {
+    primary: `text-primary`,
+    secondary: `text-secondary`,
+    neutral: `text-neutral`,
+    error: `text-error`,
+    success: `text-success`,
+    warning: `text-warning`,
+    ghost: `text-base-content`,
+  },
 };
 
 type TextProps<E extends React.ElementType> = TextOwnProps<E> &
@@ -75,6 +72,7 @@ const Taypography = <E extends React.ElementType = "span">({
   className,
   size,
   weight,
+  variant,
   ...rest
 }: TextProps<E>) => {
   const Component = as || "span";
@@ -86,6 +84,7 @@ const Taypography = <E extends React.ElementType = "span">({
           [textStyles.size[size!]]: size,
           [textStyles.weight[weight!]]: weight,
           [textStyles.align[align!]]: align,
+          [textStyles.variant[variant!]]: variant,
         },
         className
       )}

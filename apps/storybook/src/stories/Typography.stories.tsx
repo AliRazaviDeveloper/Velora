@@ -20,12 +20,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    as: "div",
+    as: "h1",
     children: "Hello world",
     size: "base",
     weight: "bold",
     align: "left",
-    className: "text-red-500",
   },
   parameters: {
     docs: {
